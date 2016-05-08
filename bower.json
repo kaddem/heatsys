@@ -1,0 +1,16 @@
+{
+  "name": "bower-components",
+  "version": "0.1.0",
+  "authors": [
+    "Kirill Demidov <kademidov@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "~3.0.3",
+    "jquery": "2.1.4",
+    "bootstrap": "^3.3.6",
+    "owl.carousel": "OwlCarousel2#^2.0.0-beta.3",
+    "jquery-validation": "^1.15.0",
+    "jquery-modal": "^0.7.0"
+  }
+}
