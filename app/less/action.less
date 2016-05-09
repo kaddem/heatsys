@@ -1,0 +1,39 @@
+.action{
+  color: @orange-color;
+
+  &__promo{
+    .col-5;
+    float: none;
+    display: table-cell;
+    position: relative;
+    
+    p{
+      font-size: 36px;
+      margin: 0;
+      padding-left: 140px;
+      &:before{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50px;
+      margin: auto;
+      content: '';
+      display: block;
+      .sprite(@icon-action);
+    }
+    }
+    strong{
+      font-size: 70px;
+      display: block;
+    }
+  }
+  &__description{
+    .col-7;
+    float: none;
+    display: table-cell;
+    font-size: 36px;
+    p{
+      margin: 0;
+    }
+  }
+}

@@ -1,4 +1,370 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.range {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.container:after,
+.range:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.col-1 {
+  width: 8.33333333%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-3 {
+  margin-left: 25%;
+}
+.col-4 {
+  width: 33.33333333%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-5 {
+  width: 41.66666667%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-6 {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-6 {
+  margin-left: 50%;
+}
+.col-7 {
+  width: 58.33333333%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-8 {
+  width: 66.66666667%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-9 {
+  width: 75%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-9 {
+  margin-left: 75%;
+}
+.col-10 {
+  width: 83.33333333%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-11 {
+  width: 91.66666667%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-12 {
+  width: 100%;
+  padding: 0 10px;
+  float: left;
+}
+.col-offset-12 {
+  margin-left: 100%;
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.btn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+}
+main {
+  margin-top: 120px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000000;
+  padding: 15px 0 8px 0;
+  -webkit-box-shadow: 0 0 1px 1px grey;
+  box-shadow: 0 0 1px 1px grey;
+}
+header .logo {
+  width: 8.33333333%;
+  padding: 0 10px;
+  float: left;
+  padding-left: 20px;
+}
+header .main-nav {
+  width: 75%;
+  padding: 0 10px;
+  float: left;
+  padding-left: 29px;
+  padding-top: 46px;
+}
+header .main-nav li {
+  display: inline-block;
+  margin-right: 25px;
+}
+header .main-nav ul a {
+  display: inline-block;
+  color: #434242;
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 13px;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header .main-nav ul a:hover {
+  border-bottom: 4px solid #f08456;
+}
+header .contacts {
+  width: 16.66666667%;
+  padding: 0 10px;
+  float: left;
+  text-align: center;
+}
+header .phone {
+  display: inline-block;
+  letter-spacing: -1px;
+  color: #000;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 4px 0 13px 0;
+  text-decoration: none;
+}
+header .btn-recall {
+  background-color: #f08456;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 22px;
+  width: 100%;
+  padding: 14px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+header .form {
+  width: 320px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px grey;
+  box-shadow: 0 0 5px grey;
+  z-index: 10000;
+}
+header .form h3 {
+  margin-top: 0;
+}
+header .form input,
+header .form button {
+  width: 100%;
+}
+header .form input {
+  margin-bottom: 20px;
+}
+header .hidden-form {
+  display: none;
+}
+header .visible-form {
+  display: block;
+  position: fixed;
+}
+.promo {
+  background-image: url(../img/bg-promo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.promo__block {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+}
+.action {
+  color: #f08456;
+}
+.action__promo {
+  width: 41.66666667%;
+  padding: 0 10px;
+  float: left;
+  float: none;
+  display: table-cell;
+  position: relative;
+}
+.action__promo p {
+  font-size: 36px;
+  margin: 0;
+  padding-left: 140px;
+}
+.action__promo p:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  margin: auto;
+  content: '';
+  display: block;
+  background-image: url(../img/sprite.png);
+  background-position: -294px 0px;
+  width: 88px;
+  height: 102px;
+}
+.action__promo strong {
+  font-size: 70px;
+  display: block;
+}
+.action__description {
+  width: 58.33333333%;
+  padding: 0 10px;
+  float: left;
+  float: none;
+  display: table-cell;
+  font-size: 36px;
+}
+.action__description p {
+  margin: 0;
+}
+.price {
+  background-image: url(../img/bg-price.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+.price__item {
+  width: 33.33333333%;
+  padding: 0 10px;
+  float: left;
+  float: none;
+  display: table-cell;
+}
+.price__item-head {
+  background-color: #326497;
+  padding: 20px;
+}
+.price__item-name {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.price__description {
+  background-color: #fff;
+  padding: 20px;
+  height: 100%;
+}
+.price__price {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+}
+.price__text {
+  font-size: 24px;
+  text-align: center;
+}
+.price__list {
+  list-style: none;
+}
+.price__list-item {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    min-width: 320px;
+  }
 }

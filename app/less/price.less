@@ -1,0 +1,50 @@
+.price{
+  background-image: url(../img/bg-price.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+
+  &__item{
+    .col-4;
+    float: none;
+    display: table-cell;
+    // position: relative;
+    &-head{
+      background-color: #326497;
+      padding: 20px;
+    }
+    &-name{
+      font-size: 28px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+  &__description{
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    height: 100%;
+  }
+  &__price{
+    display: block;
+    font-size: 50px;
+    text-align: center;
+  }
+  &__text{
+    font-size: 24px;
+    text-align: center;
+  }
+  &__list{
+    list-style: none;
+
+    &-item{
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;  
+    }
+  }
+}
