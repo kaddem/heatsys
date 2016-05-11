@@ -1,16 +1,21 @@
 footer{
   background-color: @text-color;
   color: #fff;
+  padding: 10px 0;
   a{
     color: #fff;
   }
   .logo-footer{
     .col-4;
     text-align: center;
+    padding-top: 5px;
   }
   .contacts{
     .col-8;
     list-style: none;
+    li{
+      margin-bottom: 5px;
+    }
     .adress{
       display: block;
       &:before{
@@ -23,7 +28,7 @@ footer{
     }
   }
   .copypast{
-    border-top: 1px solid grey;
+
     .col-12;
     text-align: center;
     span{
@@ -34,6 +39,7 @@ footer{
     padding-left: 18px;
     position: relative;
     text-decoration: none;
+    margin-bottom: 15px;
   }
   .phone:before, .mail:before, .adress:before{
     position: absolute;
@@ -53,6 +59,7 @@ footer{
   .mail{
     .ffbold;
     line-height: 24px;
+    font-size: 15px;
     &:before{
       content: '';
       .sprite(@icon-phone);
@@ -60,7 +67,7 @@ footer{
   }
   .adress{
     .fflite;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px;
     &:before{
       content: '';
@@ -74,6 +81,7 @@ footer{
     line-height: 24px;
     span{
       display: block;
+      border-top: 1px solid grey;
     }
     a{
       color: #fff;

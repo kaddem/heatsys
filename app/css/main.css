@@ -1387,53 +1387,6 @@ main {
     display: block;
     position: fixed;
   }
-  header .phone {
-    display: inline-block;
-    letter-spacing: -1px;
-    color: #000;
-    font-size: 20px;
-    line-height: 24px;
-    margin: 4px 0 13px 0;
-    text-decoration: none;
-  }
-  header .btn-recall {
-    background-color: #f08456;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 22px;
-    width: 100%;
-    padding: 14px 10px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  header .form {
-    width: 320px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #fff;
-    -webkit-box-shadow: 0 0 5px grey;
-    box-shadow: 0 0 5px grey;
-    z-index: 10000;
-  }
-  header .form h3 {
-    margin-top: 0;
-  }
-  header .form input,
-  header .form button {
-    width: 100%;
-  }
-  header .form input {
-    margin-bottom: 20px;
-  }
-  header .hidden-form {
-    display: none;
-  }
-  header .visible-form {
-    display: block;
-    position: fixed;
-  }
   .promo {
     background-image: url(../img/bg-promo-tablet.jpg);
     background-position: right center;
@@ -1525,9 +1478,9 @@ main {
     font-family: "Segoe Ui Bold", sans-serif;
   }
   .price {
-    background-image: url(../img/bg-price.jpg);
+    background-image: url(../img/bg-price-tablet.jpg);
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: right bottom;
     background-size: cover;
     padding: 35px 0;
     font-family: "Segoe Ui Bold", sans-serif;
@@ -2119,6 +2072,7 @@ main {
   .reviews {
     text-align: center;
     color: #434242;
+    padding-bottom: 15px;
   }
   .reviews__header {
     font-size: 30px;
@@ -2320,6 +2274,173 @@ main {
   .container {
     width: 320px;
   }
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 12px 0 11px 0;
+    -webkit-box-shadow: 0 0 1px 1px grey;
+    box-shadow: 0 0 1px 1px grey;
+  }
+  header .container {
+    position: relative;
+  }
+  header .menu-burger {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    background-image: url(../img/sprite.png);
+    background-position: -294px -232px;
+    width: 52px;
+    height: 32px;
+  }
+  header .logo {
+    margin-left: 16.66666667%;
+    width: 33.33333333%;
+    padding: 0 10px;
+    float: left;
+    text-align: center;
+  }
+  header .main-nav {
+    width: 66.66666667%;
+    padding: 0 10px;
+    float: left;
+    background-color: #fff;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top: 20px;
+    display: none;
+  }
+  header .main-nav li {
+    display: block;
+    margin-right: 0;
+    margin: 2px 0;
+  }
+  header .main-nav ul a {
+    font-size: 18px;
+    padding: 18px 25px;
+    display: block;
+    border: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: #434242;
+  }
+  header .main-nav ul a:hover {
+    background-color: #f08456;
+    border: none;
+  }
+  header .main-nav .menu-back {
+    display: block;
+    background-image: url(../img/sprite.png);
+    background-position: -336px -264px;
+    width: 31px;
+    height: 21px;
+    margin: 20px 25px;
+    cursor: pointer;
+    padding: 0;
+    margin: 18px 25px;
+  }
+  header .contacts {
+    width: 50%;
+    padding: 0 10px;
+    float: left;
+    float: right;
+  }
+  header .phone {
+    display: inline-block;
+    letter-spacing: -1px;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 4px 0 13px 0;
+    text-decoration: none;
+  }
+  header .btn-recall {
+    background-color: #f08456;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+    padding: 14px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  header .form {
+    width: 320px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 5px grey;
+    box-shadow: 0 0 5px grey;
+    z-index: 10000;
+  }
+  header .form h3 {
+    margin-top: 0;
+  }
+  header .form input,
+  header .form button {
+    width: 100%;
+  }
+  header .form input {
+    margin-bottom: 20px;
+  }
+  header .hidden-form {
+    display: none;
+  }
+  header .visible-form {
+    display: block;
+    position: fixed;
+  }
+  .promo {
+    background-image: url(../img/bg-promo-phone.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Segoe Ui", sans-serif;
+    color: #434242;
+    padding: 45px 0;
+  }
+  .promo__block {
+    width: 100%;
+    padding: 0 10px;
+    float: left;
+  }
+  .promo__head {
+    margin: 0;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: "Segoe Ui Bold", sans-serif;
+    text-transform: uppercase;
+  }
+  .promo__description {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 20px;
+  }
+  .promo__btn {
+    width: 100%;
+    background-color: #ffe252;
+    font-size: 20px;
+    line-height: 24px;
+    display: inline-block;
+    font-family: "Segoe Ui", sans-serif;
+    padding: 23px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   .action {
     color: #f08456;
     padding: 20px 0;
@@ -2329,11 +2450,12 @@ main {
     padding: 0 10px;
     float: left;
     text-align: center;
+    padding: 10px;
   }
   .action__promo p {
-    font-size: 36px;
+    font-size: 24px;
     margin: 0;
-    padding-left: 140px;
+    padding-left: 120px;
     position: relative;
   }
   .action__promo p:before {
@@ -2350,16 +2472,14 @@ main {
     height: 102px;
   }
   .action__promo strong {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 50px;
     display: block;
   }
   .action__description {
     width: 100%;
     padding: 0 10px;
     float: left;
-    font-size: 30px;
-    vertical-align: middle;
+    font-size: 20px;
     text-align: center;
   }
   .action__description p {
@@ -3076,6 +3196,7 @@ main {
   footer {
     background-color: #434242;
     color: #fff;
+    padding: 10px 0;
   }
   footer a {
     color: #fff;
@@ -3085,12 +3206,16 @@ main {
     padding: 0 10px;
     float: left;
     text-align: center;
+    padding-top: 5px;
   }
   footer .contacts {
     width: 66.66666667%;
     padding: 0 10px;
     float: left;
     list-style: none;
+  }
+  footer .contacts li {
+    margin-bottom: 5px;
   }
   footer .contacts .adress {
     display: block;
@@ -3118,6 +3243,7 @@ main {
     padding-left: 18px;
     position: relative;
     text-decoration: none;
+    margin-bottom: 15px;
   }
   footer .phone:before,
   footer .mail:before,
@@ -3142,6 +3268,7 @@ main {
   footer .mail {
     font-family: "Segoe Ui Bold", sans-serif;
     line-height: 24px;
+    font-size: 15px;
   }
   footer .mail:before {
     content: '';
@@ -3152,7 +3279,7 @@ main {
   }
   footer .adress {
     font-family: "Segoe Ui Lite", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px;
   }
   footer .adress:before {
