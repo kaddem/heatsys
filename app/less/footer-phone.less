@@ -1,51 +1,60 @@
 footer{
   background-color: @text-color;
   color: #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  a{
+    color: #fff;
+  }
   .logo-footer{
-    .col-1;
-    padding-top: 5px;
+    .col-4;
+    text-align: center;
   }
   .contacts{
-    list-style: none;
     .col-8;
-    li{
-      margin-bottom: 10px;
+    list-style: none;
+    .adress{
+      display: block;
+      &:before{
+        margin: 0;
+        top: 3px;
+      }
     }
-    a{
-      color: #fff;
+    .phone{
+      font-size: 18px;
+    }
+  }
+  .copypast{
+    border-top: 1px solid grey;
+    .col-12;
+    text-align: center;
+    span{
+      display: block;
     }
   }
   .phone, .mail, .adress{
-    padding-left: 30px;
+    padding-left: 18px;
     position: relative;
     text-decoration: none;
   }
   .phone:before, .mail:before, .adress:before{
     position: absolute;
-    left: 0;
+    left: -10px;
     top: 0;
     bottom: 0;
     margin: auto;
   }
   .phone{
     .ffbold;
-    font-size: 24px;
     line-height: 30px;
     &:before{
       content: '';
-      display: inline-block;
       .sprite(@icon-mail);
     }
   }
   .mail{
     .ffbold;
-    font-size: 20px;
     line-height: 24px;
     &:before{
       content: '';
-      display: inline-block;
       .sprite(@icon-phone);
     }
   }
@@ -55,12 +64,11 @@ footer{
     line-height: 24px;
     &:before{
       content: '';
-      display: inline-block;
       .sprite(@icon-map);
     }
   }
   .copypast{
-    .col-3;
+    .col-12;
     .fflite;
     font-size: 18px;
     line-height: 24px;

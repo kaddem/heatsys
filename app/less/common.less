@@ -5,6 +5,9 @@ ul{
   padding: 0;
   margin: 0;
 }
+input, button, textarea{
+  outline: none;
+}
 
 .btn{
   white-space: nowrap;
@@ -14,4 +17,103 @@ ul{
 }
 main{
   margin-top: 120px;
+}
+.ffbold{
+  font-family: "Segoe Ui Bold", sans-serif;
+}
+.ffnormal{
+  font-family: "Segoe Ui", sans-serif;
+}
+.fflite{
+  font-family: "Segoe Ui Lite", sans-serif;
+}
+
+.form-close{
+  top: 5px;
+  right: 5px;
+  display: none;
+  position: absolute;
+  .sprite(@icon-modal-close);
+  cursor: pointer;
+}
+.modal{
+  border-radius: 0;
+  width: @phone-min;
+}
+.modal a.close-modal{
+  top: 5px;
+  right: 5px;
+  .sprite(@icon-modal-close);
+}
+.form{
+  padding: 25px;
+  padding-top: 35px;
+  border: 1px solid @form-border;
+  margin-left: 0;
+  margin-right: 0;
+  width: @phone-min - 20px;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  h3{
+    margin-top: 0;
+    text-align: center;
+  }
+  & input, & button{
+    width: 100%;
+  }
+  & input{
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 15px;
+  }
+  & button{
+    background-color: @yellow-color;
+    font-size: 18px;
+    padding: 17px;
+    font-weight: bold;
+    border: none;
+  }
+}
+.promo__btn{
+  white-space: normal;
+}
+.hidden-form{
+  display: none;
+}
+.blocker{
+  z-index: 99999;
+  padding: 0;
+}
+// .price{
+//   &__price{
+//     &:after{
+//       content: "\U+20BD";
+//       display: inline-block;
+//     }
+//   }
+// }
+.owl-carousel{
+  & .owl-nav{
+    display: block;
+
+    .owl-prev, .owl-next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .owl-prev{
+      left: -80px;
+      .sprite(@icon-carousel-left);
+    }
+    .owl-next{
+      right: -80px;
+      .sprite(@icon-carousel-right);
+    }
+  }
+}
+.owl-nav, .owl-prev{
+  display: block !important;
 }

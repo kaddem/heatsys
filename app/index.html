@@ -26,18 +26,18 @@
         <nav class="main-nav">
           <a class="menu-back" href="#"></a>
           <ul id="anchor-menu">
-            <li><a href="#floor">Стоимость</a></li>
-            <li><a href="#gift">Наши услуги</a></li>
-            <li><a href="#howwork">Преимущества</a></li>
-            <li><a href="#pay">Оборудование</a></li>
+            <li><a href="#price">Стоимость</a></li>
+            <li><a href="#services">Наши услуги</a></li>
+            <li><a href="#advantages">Преимущества</a></li>
+            <li><a href="#partners">Оборудование</a></li>
             <li><a href="#reviews">Отзывы</a></li>
-            <li><a href="#services">Контакты</a></li>
+            <li><a href="#map">Контакты</a></li>
           </ul>
         </nav>
         <div class="contacts">
           <a href="tel:+78127150506" class="phone">+7 (812) 715-05-06</a>
           <button class="btn btn-recall" id="btn-recall">Заказать звонок</button>
-          <form action="#" class="form hidden-form" id="form_recall" onsubmit="yaCounter36809450.reachGoal('recall'); ga('send', 'event', 'SendForm', 'SendRecall');">
+          <form action="#" class="form hidden-form" id="form_recall">
             <h3 class="calculate__head">Заказ обратного звонка</h3>
             <div class="form-row">
               <input type="hidden" class="title" name="DATA[TITLE]" value="Форма - Заказ обратного звонка">
@@ -63,7 +63,21 @@
         <div class="promo__block">
           <h1 class="promo__head">Системы отопления любой сложности</h1>
           <p class="promo__description">Проектирование, поставка и монтаж оборудования для систем отопления любых типов</p>
-          <button class="btn promo__btn">Рассчитать стоимость</button>
+          <button class="btn promo__btn">Получить консультацию инженера</button>
+          <form action="#" class="form hidden-form" id="form_calculate">
+            <h3 class="calculate__head form-head">Оставьте свои контакты и наш инженер свяжется с вами</h3>
+            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы Расчет предварительной стоимости">
+            <div class="form-row">
+              <input type="text" class="form-name" name="name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-email" name="email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+            </div>
+            <button class="btn" name="enter">Получить расчет</button>
+          </form>
         </div>
       </div>
     </div>
@@ -75,7 +89,7 @@
           </div>
           <!-- /.action__promo -->
           <div class="action__description">
-            <p>При заказе системы отопления, монтаж теплого пола со скидкой - 300р/м.кв</p>
+            <p>При заказе системы отопления, монтаж теплого пола со скидкой - <b>300р/м.кв</b></p>
           </div>
           <!-- /.action__description -->
         </div>
@@ -86,12 +100,12 @@
     <!-- /.action -->
     <div class="price">
       <div class="container">
-        <h2 class="price__head">Стоимость систем отопления под ключ</h2>
+        <h2 class="price__header" id="price">Стоимость систем отопления под ключ</h2>
         <!-- /.price__head -->
         <div class="price__menu">
           <span>Выберите площадь(м./кв.):</span>
           <ul class="price__nav">
-            <li class="price__nav-item"><a href="#">100</a></li>
+            <li class="price__nav-item"><a href="#" class="active">100</a></li>
             <!-- /.price__nav-item -->
             <li class="price__nav-item"><a href="#">200</a></li>
             <!-- /.price__nav-item -->
@@ -101,91 +115,108 @@
           <!-- /.price__nav -->
         </div>
         <!-- /.price__menu -->
-        <div class="range">
+        <div class="range table-row">
           <div class="price__item">
-            <div class="price__item-head">
-              <span class="price__item-name">Базовый</span>
-              <span class="price__item-square">100</span>
+            <div class="price__head">
+              <span class="price__name">Базовый</span>
+              <span class="price__square">100 м./кв.</span>
+              <strong class="price__price">171200 &#8381;</strong>
             </div>
             <!-- /.price__item-head -->
             <div class="price__description">
-              <strong class="price__price">171200р</strong>
               <p class="price__text">В стоимость входит</p>
               <!-- /.price__text -->
               <ul class="price__list">
-                <li class="price__list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, accusamus.</li>
+                <li class="price__list-item">Монтажные работы по установке и обвязке котла, 7 радиаторов, труб системы отопления</li>
                 <!-- /.price__list-item -->
-                <li class="price__list-item">Rerum earum aut harum est, neque. Voluptatum, ducimus magni nam.</li>
+                <li class="price__list-item">Газовый двухконтурный котел Baxi, стальные радиаторы Лидея 7 шт, комплект дымохода</li>
                 <!-- /.price__list-item -->
-                <li class="price__list-item">Dicta minus sint amet omnis a consectetur blanditiis nihil quasi.</li>
+                <li class="price__list-item">Полипропиленовые трубы, краны, фитинги, крепеж</li>
                 <!-- /.price__list-item -->
               </ul>
               <!-- /.price__list -->
-              <button class="btn btn__price">Заказать отопление</button>
+              <button class="btn price__btn">Заказать отопление</button>
             </div>
             <!-- /.price__description -->
-            
+
           </div>
           <!-- /.price__item -->
           <div class="price__item">
-            <div class="price__item-head">
-              <span class="price__item-name">Стандарт</span>
-              <span class="price__item-square">100</span>
+            <div class="price__head">
+              <span class="price__name">Стандарт</span>
+              <span class="price__square">100 м./кв.</span>
+              <strong class="price__price">208900 &#8381;</strong>
             </div>
             <!-- /.price__item-head -->
             <div class="price__description">
-              <strong class="price__price">208900р</strong>
+
               <p class="price__text">В стоимость входит</p>
               <!-- /.price__text -->
               <ul class="price__list">
-                <li class="price__list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quod.</li>
+                <li class="price__list-item">Монтажные работы по установке и обвязке котла, бойлера, смесительного узла, колектора теплого пола, системы теплых полов 52 м кв, 4 радиаторов, труб системы отопления.</li>
                 <!-- /.price__list-item -->
-                <li class="price__list-item">Optio et, officia molestias, aperiam nemo voluptatem mollitia sint quia.</li>
+                <li class="price__list-item">Газовый одноконтурный котел Baxi, бойлер Drazice,  смесительный узел, коллектор теплого пола, стальные радиаторы Лидея 4 шт, комплект дымохода.</li>
                 <!-- /.price__list-item -->
-                <li class="price__list-item">Quibusdam aperiam sequi accusantium suscipit repellendus consectetur. Non unde, magni?</li>
-                <!-- /.price__list-item -->
-              </ul>
-              <!-- /.price__list -->
-              <button class="btn btn__price">Заказать отопление</button>
-            </div>
-            <!-- /.price__description -->
-          </div>
-          <!-- /.price__item -->
-          <div class="price__item">
-            <div class="price__item-head">
-              <span class="price__item-name">Оптимальный</span>
-              <span class="price__item-square">100</span>
-            </div>
-            <!-- /.price__item-head -->
-            <div class="price__description">
-              <strong class="price__price">302600р</strong>
-              <p class="price__text">В стоимость входит</p>
-              <!-- /.price__text -->
-              <ul class="price__list">
-                <li class="price__list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, cumque?</li>
-                <!-- /.price__list-item -->
-                <li class="price__list-item">Accusantium modi voluptatum velit libero vel fuga atque! Amet, perferendis!</li>
-                <!-- /.price__list-item -->
-                <li class="price__list-item">Cumque quis ut minima dolorum, veniam dicta mollitia quos, iusto.</li>
+                <li class="price__list-item">Трубы для теплого пола РЕХ, полипропиленовые трубы, краны, фитинги, крепеж.</li>
                 <!-- /.price__list-item -->
               </ul>
               <!-- /.price__list -->
-              <button class="btn btn__price">Заказать отопление</button>
+              <button class="btn price__btn">Заказать отопление</button>
             </div>
             <!-- /.price__description -->
           </div>
           <!-- /.price__item -->
+          <div class="price__item">
+            <div class="price__head">
+              <span class="price__name">Оптимальный</span>
+              <span class="price__square">100 м./кв.</span>
+              <strong class="price__price">302600 &#8381;</strong>
+            </div>
+            <!-- /.price__item-head -->
+            <div class="price__description">
+              <p class="price__text">В стоимость входит</p>
+              <!-- /.price__text -->
+              <ul class="price__list">
+                <li class="price__list-item">Монтажные работы по установке и обвязке котла, бойлера, смесительного узла, колектора теплого пола, системы теплых полов 52 м кв, автоматики управления для теплого пола и радиаторов, коллектора радиатороного, 4 радиаторов, труб системы отопления.</li>
+                <!-- /.price__list-item -->
+                <li class="price__list-item">Газовый одноконтурный котел Vaillant, бойлер Vaillant,  смесительный узел, коллектор теплого пола, коллектор радиаторный,  стальные радиаторы Kermi 4 шт, комплект дымохода, автоматика управления теплым полом и радиаторами.</li>
+                <!-- /.price__list-item -->
+                <li class="price__list-item">Трубы для теплого пола РЕХ, металлопластиковые трубы, краны, фитинги, крепеж.</li>
+                <!-- /.price__list-item -->
+              </ul>
+              <!-- /.price__list -->
+              <button class="btn price__btn">Заказать отопление</button>
+            </div>
+            <!-- /.price__description -->
+          </div>
+          <!-- /.price__item -->
+          <form action="#" class="form hidden-form" id="form_price">
+            <h3 class="calculate__head form-head">Отправте заявку на монтаж отопления</h3>
+            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы Расчет предварительной стоимости">
+            <div class="form-row">
+              <input type="text" class="form-name" name="name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-email" name="email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+            </div>
+            <button class="btn" name="enter">Получить расчет</button>
+          </form>
         </div>
         <!-- /.range -->
         <div class="range">
           <div class="pay">
-            <h3 class="pay__head"></h3>
-            <ul class="pay__list">
-              <li class="pay__item">Lorem ipsum dolor.</li>
-              <li class="pay__item">Voluptate sit, quae.</li>
-              <li class="pay__item">Quisquam, et, qui!</li>
-              <li class="pay__item">Incidunt, fugit, dignissimos!</li>
-            </ul>
+            <div class="pay__bg">
+              <h3 class="pay__head">Варианты оплаты</h3>
+              <ul class="pay__list">
+                <li class="pay__item pay--nomoney">Безналичный расчет.</li>
+                <li class="pay__item pay--purse">Наличными через кассу.</li>
+                <li class="pay__item pay--card">Банковской картой в офисе.</li>
+                <li class="pay__item pay--percent">В кредит</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -195,46 +226,47 @@
 
     <div class="step">
       <div class="container">
-        <ul class="range step__list">
+        <h2 class="step__header">Этапы выполнения работ</h2>
+        <ul class="step__list">
           <li class="step__item">
-            <h4 class="step__head">Lorem ipsum.</h4>
+            <h4 class="step__head">Обращение.</h4>
             <!-- /.step__head -->
-            <p class="step__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, in.</p>
+            <p class="step__text">Вы связываетесь с нами и присылаете заявку на расчет теплого пола.</p>
             <!-- /.step__text -->
           </li>
           <!-- /.step__item -->
           <li class="step__item">
-            <h4 class="step__head">Nisi, ad.</h4>
+            <h4 class="step__head">Расчет теплого пола.</h4>
             <!-- /.step__head -->
-            <p class="step__text">Praesentium earum harum, excepturi ipsa, at repudiandae ipsum labore quos.</p>
+            <p class="step__text">Инженер приезжает к вам на объект, получает необходимые данный и подготавливает проект.</p>
             <!-- /.step__text -->
           </li>
           <!-- /.step__item -->
           <li class="step__item">
-            <h4 class="step__head">Velit, tempora!</h4>
+            <h4 class="step__head">Согласование и оплата.</h4>
             <!-- /.step__head -->
-            <p class="step__text">Praesentium iste autem facilis ipsa harum vero nemo molestias asperiores.</p>
+            <p class="step__text">Вы согласовываете проект и оплачиваете работы удобным способом.</p>
             <!-- /.step__text -->
           </li>
           <!-- /.step__item -->
           <li class="step__item">
-            <h4 class="step__head">Odio, eveniet.</h4>
+            <h4 class="step__head">Подготовка.</h4>
             <!-- /.step__head -->
-            <p class="step__text">Soluta quaerat maxime totam distinctio, repudiandae, laborum nulla earum eius.</p>
+            <p class="step__text">Наши специалисты выполняют монтаж системы у вас на объекте.</p>
             <!-- /.step__text -->
           </li>
           <!-- /.step__item -->
           <li class="step__item">
-            <h4 class="step__head">Ad, officia.</h4>
+            <h4 class="step__head">Монтаж.</h4>
             <!-- /.step__head -->
-            <p class="step__text">Obcaecati aperiam laboriosam perspiciatis ad incidunt iure accusantium autem soluta!</p>
+            <p class="step__text">Наши специалисты выполняют монтаж системы у вас на объекте.</p>
             <!-- /.step__text -->
           </li>
           <!-- /.step__item -->
           <li class="step__item">
-            <h4 class="step__head">Facere, vero.</h4>
+            <h4 class="step__head">Сдача проекта.</h4>
             <!-- /.step__head -->
-            <p class="step__text">Provident laboriosam accusantium sequi ab. Vitae voluptate iure magnam esse.</p>
+            <p class="step__text">Инженер приезжает к вам на объект, получает необходимые данный и подготавливает.</p>
             <!-- /.step__text -->
           </li>
           <!-- /.step__item -->
@@ -247,73 +279,77 @@
 
     <div class="services">
       <div class="container">
-        <h2 class="services__head">Наши услуги</h2>
+        <h2 class="services__header" id="services">Наши услуги</h2>
         <!-- /.services__head -->
-        <ul class="range services__nav">
-          <li class="services__nav-item"><a href="">Lorem ipsum.</a></li>
+        <ul class="services__nav">
+          <li class="services__nav-item"><a class="active" href="">Отопительные котлы</a></li>
           <!-- /.services__nav-item -->
-          <li class="services__nav-item"><a href="">Deserunt, magnam.</a></li>
+          <li class="services__nav-item"><a href="">Система отопления</a></li>
           <!-- /.services__nav-item -->
-          <li class="services__nav-item"><a href="">Earum, ratione?</a></li>
+          <li class="services__nav-item"><a href="">Монтаж котельной</a></li>
           <!-- /.services__nav-item -->
-          <li class="services__nav-item"><a href="">Incidunt, quidem.</a></li>
+          <li class="services__nav-item"><a href="">Автономная газификация</a></li>
           <!-- /.services__nav-item -->
-          <li class="services__nav-item"><a href="">Voluptas, incidunt!</a></li>
+          <li class="services__nav-item"><a href="">Водоснабжение и канализация</a></li>
           <!-- /.services__nav-item -->
-          <li class="services__nav-item"><a href="">Molestias, reiciendis.</a></li>
+          <li class="services__nav-item"><a href="">Биологическая очистка</a></li>
           <!-- /.services__nav-item -->
-          <li class="services__nav-item"><a href="">Deleniti, nihil.</a></li>
+          <li class="services__nav-item"><a href="">Система водоподготовки</a></li>
           <!-- /.services__nav-item -->
         </ul>
         <!-- /.range services__nav -->
         <div class="range">
           <div class="services__description">
-            <h3 class="services__description-head">Специалисты нашей компании быстро и качественно устанавливают все виды котлов:</h3>
+            <h3 class="services__head">Специалисты нашей компании быстро и качественно устанавливают все виды котлов:</h3>
             <!-- /.services__description-head -->
             <ul class="services__list">
-              <li class="services__list-item">Lorem ipsum.</li>
+              <li class="services__list-item">Газовые котлы</li>
               <!-- /.services__list-item -->
-              <li class="services__list-item">Consequuntur, fuga.</li>
+              <li class="services__list-item">Твёрдотопливные котлы</li>
               <!-- /.services__list-item -->
-              <li class="services__list-item">Illo, quo!</li>
+              <li class="services__list-item">Электрические котлы</li>
               <!-- /.services__list-item -->
             </ul>
             <!-- /.services__list -->
-            <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, laboriosam aperiam expedita maiores, iste dolor odit officiis blanditiis deleniti nesciunt ducimus, molestiae corporis hic incidunt tempore aut animi! Necessitatibus, nesciunt.</p>
-            <!-- /.services__text -->
-            <p class="services__text">Ipsam laudantium, quia error consequatur reprehenderit dolorum nostrum incidunt molestias deserunt rerum provident porro libero sint! Provident odio vel fugit labore doloremque. Consequuntur quas aliquid error voluptas, labore culpa eius?</p>
+            <div class="services__text">
+              <p>Выбирать котел наобум нельзя, ведь многое зависит  от вида топлива которым располагает заказчик. Замерщик на выезде расскажет Вам, какой котел стоит выбрать именно для Вашего дома и почему. Кроме того мы предложим Вам лучшие бренды отопительных котлов по оптовым ценам — у нас налажено сотрудничество с ведущими поставщиками лучшего  европейского и отечественного оборудования.</p>
+              <p>Заказывая установку котлов у нас, Вы можете рассчитывать не только на качественные электромонтажные и установочные работы, но и на сервисное бесплатное обслуживание Вашего котла в течение 1 года.</p>
+            </div>
+
             <!-- /.services__text -->
           </div>
           <!-- /.services__description -->
-          <form action="" class="services__form">
-            <span class="form__head"></span>
-            <input type="text" class="form__input" placeholder="text">
-            <input type="text" class="form__input" placeholder="text">
-            <input type="text" class="form__input" placeholder="text">
-            <button class="btn services__btn">Вызвать замерщика</button>
-          </form>
+          <div class="gallery">
+            <div class="gallery__item">
+              <img src="img/services-photo1.jpg" alt="">
+              </div>
+            <!-- /.gallery__item -->
+            <div class="gallery__item">
+              <img src="img/services-photo2.jpg" alt="">
+              </div>
+            <!-- /.gallery__item -->
+            <div class="gallery__item">
+              <img src="img/services-photo3.jpg" alt="">
+              </div>
+            <!-- /.gallery__item -->
+            <div class="gallery__item">
+              <img src="img/services-photo4.jpg" alt="">
+              </div>
+            <!-- /.gallery__item -->
+          </div>
+          <!-- /.range gallery -->
+          <div class="services__form">
+            <form action="" class="form">
+              <span class="form__head">Вызовите инженера на объект</span>
+              <input type="text" class="form__input" placeholder="Имя">
+              <input type="text" class="form__input" placeholder="телефон">
+              <input type="text" class="form__input" placeholder="e-mail">
+              <button class="btn services__btn">Вызвать замерщика</button>
+            </form>
+          </div>
           <!-- /.services__form -->
         </div>
         <!-- /.range -->
-        <div class="range gallery">
-          <div class="gallery__item">
-            <img src="img/services-photo1.jpg" alt="">
-            </div>
-          <!-- /.gallery__item -->
-          <div class="gallery__item">
-            <img src="img/services-photo2.jpg" alt="">
-            </div>
-          <!-- /.gallery__item -->
-          <div class="gallery__item">
-            <img src="img/services-photo3.jpg" alt="">
-            </div>
-          <!-- /.gallery__item -->
-          <div class="gallery__item">
-            <img src="img/services-photo4.jpg" alt="">
-            </div>
-          <!-- /.gallery__item -->
-        </div>
-        <!-- /.range gallery -->
       </div>
       <!-- /.container -->
     </div>
@@ -321,62 +357,62 @@
 
     <div class="advantages">
       <div class="container">
-        <h2 class="advantages__head">Наши преимущества</h2>
+        <h2 class="advantages__header" id="advantages">Наши преимущества</h2>
         <!-- /.advantages__head -->
-        <ul class="range">
+        <ul class="advantages__list">
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Работаем без предоплаты</h3>
+            <h3 class="advantages__head">Работаем без предоплаты</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">Мы доверяем Вам и хотим, чтобы Вы доверили нам. Именно поэтому все работы оплачиваются после приемки объекта. Единственное, что оплачивается сразу — материалы.</p>
+            <p class="advantages__text">Мы доверяем Вам и хотим, чтобы Вы доверили нам. Именно поэтому все работы оплачивают&shy;ся после приемки объекта. Единственное, что оплачивается сразу — материалы.</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Делим оплату на части</h3>
+            <h3 class="advantages__head">Делим оплату на части</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">Если сумма оказалась для Вас слишком большой, мы делим ее на несколько платежей, чтобы Вам было легче оплатить услуги</p>
+            <p class="advantages__text">Если сумма оказалась для Вас слишком большой, мы делим ее на несколько платежей, чтобы Вам было легче оплатить услуги</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Гарантируем качество</h3>
+            <h3 class="advantages__head">Гарантируем качество</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">На каждое использованное оборудования или строительный материал мы по первому требованию предъявим сертификаты качества!</p>
+            <p class="advantages__text">На каждое использованное оборудования или строительный материал мы по первому требованию предъявим сертификаты качества!</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Адекватные цены</h3>
+            <h3 class="advantages__head">Адекватные цены</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">С нами Вы будете сотрудничатьс напрямую, т.к. мы не являемся чьими-то посредниками. В нашей компании цена на работу и материалы снижена до 18%</p>
+            <p class="advantages__text">С нами Вы будете сотрудничатьс напрямую, т.к. мы не являемся чьими-то посредниками. В нашей компании цена на работу и материалы снижена до 18%</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Высокий уровень сервиса</h3>
+            <h3 class="advantages__head">Высокий уровень сервиса</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">Мы работаем не первый год и заинтересованы в дальнейшем развитии компании и новых клиентах. нам важно, чтобы Вы рекомендовали нас своим друзьям.</p>
+            <p class="advantages__text">Мы работаем не первый год и заинтересованы в дальнейшем развитии компании и новых клиентах. нам важно, чтобы Вы рекомендовали нас своим друзьям.</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Бесплатное обслуживание</h3>
+            <h3 class="advantages__head">Бесплатное обслуживание</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">Мы делаем все, чтобы гарантийный случай не наступал. Но если все же возникает необходимость ремонта по нашей вине, мы приезжаем и проводим весь комплес необходимых работ по устранению неполадок.</p>
+            <p class="advantages__text">Мы делаем все, чтобы гарантийный случай не наступал. Но если все же возникает необходимость ремонта по нашей вине, мы приезжаем и проводим весь комплес необходимых работ по устранению неполадок.</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Обучаем клиента эксплуатации</h3>
+            <h3 class="advantages__head">Обучаем клиента эксплуатации</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">На каждое использованное оборудования или строительный материал мы по первому требованию предъявим сертификаты качества!</p>
+            <p class="advantages__text">На каждое использованное оборудования или строительный материал мы по первому требованию предъявим сертификаты качества!</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
           <li class="advantages__item">
-            <h3 class="advantages__item-head">Адекватные цены</h3>
+            <h3 class="advantages__head">Адекватные цены</h3>
             <!-- /.advantages__item-head -->
-            <p class="advantages__item-text">С нами Вы будете сотрудничатьс напрямую, т.к. мы не являемся чьими-то посредниками. В нашей компании цена на работу и материалы снижена до 18%</p>
+            <p class="advantages__text">С нами Вы будете сотрудничатьс напрямую, т.к. мы не являемся чьими-то посредниками. В нашей компании цена на работу и материалы снижена до 18%</p>
             <!-- /.advantages__item-text -->
           </li>
           <!-- /.advantages__item -->
@@ -389,24 +425,44 @@
 
     <div class="sertificate">
       <div class="container">
-        <h2 class="sertificate__head">Наши сертификаты</h2>
+        <h2 class="sertificate__header">Наши сертификаты</h2>
         <!-- /.sertificate__head -->
         <div class="range">
-          <ul class="sertificate__gallery">
+          <ul class="sertificate__gallery owl-carousel" id="owl-sertificate">
             <li class="sertificate__item">
-              <img src="" alt="" class="sertificate__img">
+              <img src="img/sertificate/Baxi_Koz.jpg" alt="sertificate" class="sertificate__img">
             </li>
             <!-- /.sertificate__item -->
             <li class="sertificate__item">
-              <img src="" alt="" class="sertificate__img">
+              <img src="img/sertificate/Dimplex_Sol.jpg" alt="sertificate" class="sertificate__img">
             </li>
             <!-- /.sertificate__item -->
             <li class="sertificate__item">
-              <img src="" alt="" class="sertificate__img">
+              <img src="img/sertificate/Lamborghini_Sol.jpg" alt="sertificate" class="sertificate__img">
             </li>
             <!-- /.sertificate__item -->
             <li class="sertificate__item">
-              <img src="" alt="" class="sertificate__img">
+              <img src="img/sertificate/meibes_Koz.jpg" alt="sertificate" class="sertificate__img">
+            </li>
+            <!-- /.sertificate__item -->
+            <li class="sertificate__item">
+              <img src="img/sertificate/Nibe_Sol.jpg" alt="sertificate" class="sertificate__img">
+            </li>
+            <!-- /.sertificate__item -->
+            <li class="sertificate__item">
+              <img src="img/sertificate/Oilon_Koz.jpg" alt="sertificate" class="sertificate__img">
+            </li>
+            <!-- /.sertificate__item -->
+            <li class="sertificate__item">
+              <img src="img/sertificate/Rapido_Sol.jpg" alt="sertificate" class="sertificate__img">
+            </li>
+            <!-- /.sertificate__item -->
+            <li class="sertificate__item">
+              <img src="img/sertificate/Termet_Sol.jpg" alt="sertificate" class="sertificate__img">
+            </li>
+            <!-- /.sertificate__item -->
+            <li class="sertificate__item">
+              <img src="img/sertificate/Vaillant_Motin.jpg" alt="sertificate" class="sertificate__img">
             </li>
             <!-- /.sertificate__item -->
           </ul>
@@ -420,55 +476,55 @@
 
     <div class="partners">
       <div class="container">
-        <h2 class="partners__head">Оборудование, с которым работаем</h2>
+        <h2 class="partners__header" id="partners">Оборудование, с которым работаем</h2>
         <!-- /.partners__head -->
         <ul class="partners__list">
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-electrolux.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-viessmann.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-rinnai.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-fondital.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-buderus.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-ferroli.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-bosch.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-vaillant.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-wolf.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-protherm.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-ariston.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
           <li class="partners__item">
-            <img src="" alt="" class="partners__logo">
+            <img src="img/logo-baxi.png" alt="" class="partners__logo">
           </li>
           <!-- /.partners__item -->
         </ul>
@@ -478,40 +534,45 @@
     </div>
     <!-- /.partners -->
 
-    <div class="reviews">
+    <div class="reviews" >
       <div class="container">
-        <h2 class="reviews__head">
-          <ul class="range reviews__list">
+        <h2 class="reviews__header" id="reviews">Отзывы</h2>
+        <!-- /.reviews__head -->
+        <div class="range">
+          <ul class="reviews__list owl-carousel" id="owl-reviews">
             <li class="reviews__item">
-              <img src="" alt="">
-              <blockquote>
-                <cite></cite>
+              <div class="img-skin"><img src="img/reviews_eugeniy.jpg" alt="Фотография Евгения для отзыва об установке водяного теплого пола"></div>
+              <blockquote class="reviews__text">
+                <cite class="reviews__name">Евгений</cite>
+                Обратился в компанию для монтажа и проектирования теплых полов. Работы были выполнены в строго поставленные сроки и предельно качественно. Очень благодарен специалистам компании «РОСА Монтаж»!
               </blockquote>
             </li>
             <!-- /.reviews__item -->
             <li class="reviews__item">
-              <img src="" alt="">
-              <blockquote>
-                <cite></cite>
+              <div class="img-skin"><img src="img/reviews_elena.jpg" alt="Фотография Елены для отзыва об установке водяного теплого пола"></div>
+              <blockquote class="reviews__text">
+                <cite class="reviews__name">Елена</cite>
+                Очень долго искала подходящую компанию для установки теплых полов в моем доме. Знакомый посоветовал компанию «РОСА Монтаж». При сотрудничестве нисколько не пожалела, все было сделано так, как я хотела
               </blockquote>
             </li>
             <!-- /.reviews__item -->
             <li class="reviews__item">
-              <img src="" alt="">
-              <blockquote>
-                <cite></cite>
+              <div class="img-skin"><img src="img/reviews_constantin.jpg" alt="Фотография Константина для отзыва об установке водяного теплого пола"></div>
+              <blockquote class="reviews__text">
+                <cite class="reviews__name">Константин</cite>
+                Разослал сведения о доме в кучу разных компаний для проекта. Никто не предоставил ничего путного. В компании «РОСА Монтаж» мы нашли индивидуальный подход к своему дому, как и хотели. Спасибо профессионалам!
               </blockquote>
             </li>
             <!-- /.reviews__item -->
           </ul>
-          <!-- /.range reviews__list -->
-        </h2>
-        <!-- /.reviews__head -->
+          <!-- /.reviews__list -->
+        </div>
+        <!-- /.range -->
       </div>
       <!-- /.container -->
     </div>
     <!-- /.reviews -->
-    <div class="map"></div>
+    <div class="map" id="map"></div>
     <div class="question">
       <div class="container">
         <form action="#" class="form form-question" id="form-question">
@@ -523,7 +584,7 @@
           <div class="form-row">
             <textarea class="form-text" name="text" placeholder="Сообщение"></textarea>
           </div>
-          <button class="btn">Отправить</button>
+          <button class="btn question__btn">Отправить</button>
         </form>
       </div>
     </div>
@@ -532,7 +593,7 @@
     <div class="container">
       <div class="range">
         <div class="logo-footer">
-          <img src="  img/main_logo_footer.png" alt="РОСА Монтаж. Логотип">
+          <img src="img/logo-rosa-footer.png" alt="РОСА Монтаж. Логотип">
         </div>
         <ul class="contacts">
           <li>
@@ -554,6 +615,25 @@
   </footer>
   <div id="thank-you">
   </div>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDRQVjTZq6DH0X8LwFzLIvXJqAWW5kiCo&signed_in=true&callback=initMap">
+  </script>
+  <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: {lat: 59.8863, lng: 30.365594},
+        scrollwheel: false
+      });
+
+      var image = 'img/icon-rosa-map.png';
+      var beachMarker = new google.maps.Marker({
+        position: {lat: 59.8863, lng: 30.365594},
+        map: map,
+        icon: image
+      });
+    }
+  </script>
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
