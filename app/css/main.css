@@ -290,6 +290,25 @@ main {
 .owl-prev {
   display: block !important;
 }
+.form-row {
+  position: relative;
+}
+label.error {
+  z-index: 99999999;
+  font-size: 12px;
+  position: absolute;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #434242;
+  background-color: #fff;
+  padding: 5px;
+  left: 0;
+  top: -10px;
+  color: #000;
+}
+.map {
+  height: 380px;
+}
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
@@ -797,6 +816,9 @@ main {
   .services__nav a:hover {
     border: 3px solid #fff;
   }
+  .services__nav .active {
+    border: 3px solid #fff;
+  }
   .services__description {
     width: 66.66666667%;
     padding: 0 10px;
@@ -1059,6 +1081,7 @@ main {
   .reviews {
     text-align: center;
     color: #434242;
+    padding: 15px 0;
   }
   .reviews__header {
     font-size: 30px;
@@ -1799,6 +1822,9 @@ main {
   .services__nav a:hover {
     border: 3px solid #fff;
   }
+  .services__nav .active {
+    border: 3px solid #fff;
+  }
   .services__head {
     width: 100%;
     padding: 0 10px;
@@ -2272,7 +2298,7 @@ main {
 }
 @media screen and (max-width: 767px) {
   .container {
-    width: 320px;
+    min-width: 320px;
   }
   header {
     position: fixed;
@@ -2354,9 +2380,10 @@ main {
     padding: 0 10px;
     float: left;
     float: right;
+    text-align: right;
   }
   header .phone {
-    display: inline-block;
+    display: block;
     letter-spacing: -1px;
     color: #000;
     font-size: 18px;
@@ -2369,7 +2396,7 @@ main {
     color: #ffffff;
     font-size: 14px;
     line-height: 22px;
-    width: 100%;
+    width: 140px;
     padding: 14px 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -2500,6 +2527,9 @@ main {
     padding-left: 0;
     padding-right: 0;
   }
+  .price .range {
+    margin: 0;
+  }
   .price__header {
     font-size: 24px;
     text-transform: uppercase;
@@ -2533,6 +2563,7 @@ main {
     float: left;
     margin: 0;
     position: relative;
+    padding: 0;
   }
   .price__head {
     background-color: #326497;
@@ -2573,7 +2604,7 @@ main {
   .price__price {
     display: block;
     font-size: 26px;
-    text-align: center;
+    text-align: right;
   }
   .price__text {
     margin-top: 0;
@@ -2787,6 +2818,7 @@ main {
     display: inline-block;
     font-family: "Segoe Ui", sans-serif;
     text-decoration: none;
+    vertical-align: middle;
     text-align: center;
     border: 3px solid #f08456;
     padding: 10px 3px;
@@ -3228,7 +3260,6 @@ main {
     font-size: 18px;
   }
   footer .copypast {
-    border-top: 1px solid grey;
     width: 100%;
     padding: 0 10px;
     float: left;
@@ -3299,6 +3330,9 @@ main {
   }
   footer .copypast span {
     display: block;
+  }
+  footer .copypast span:first-child {
+    border-top: 1px solid grey;
   }
   footer .copypast a {
     color: #fff;
