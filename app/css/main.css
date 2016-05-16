@@ -337,6 +337,7 @@ label.error {
     padding-left: 29px;
     padding-top: 46px;
     display: block !important;
+    text-align: center;
   }
   header .main-nav li {
     display: inline-block;
@@ -685,6 +686,9 @@ label.error {
     width: 32px;
     height: 37px;
   }
+  .step {
+    padding: 20px 0;
+  }
   .step .container {
     padding-left: 60px;
     padding-right: 100px;
@@ -710,6 +714,8 @@ label.error {
     width: 33.33333333%;
     padding: 0 10px;
     float: left;
+    position: relative;
+    padding-top: 75px;
   }
   .step__item:nth-child(4),
   .step__item:nth-child(5),
@@ -731,10 +737,14 @@ label.error {
     background-color: #f08456;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    border: 3px solid #fcfffd;
     text-align: center;
     line-height: 65px;
     font-size: 30px;
     color: #fff;
+    position: absolute;
+    left: 5px;
+    top: 0;
     font-family: "Segoe Ui Bold", sans-serif;
   }
   .step__item:nth-child(1):before {
@@ -760,6 +770,35 @@ label.error {
     background-color: transparent;
     -webkit-border-radius: 0;
     border-radius: 0;
+    border: none;
+    background-color: #fff;
+  }
+  .step__item:nth-child(6):after {
+    content: '';
+    display: block;
+    border-top: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #b6b5b5;
+    position: absolute;
+    top: 31px;
+    left: 77px;
+    z-index: -1;
+  }
+  .step__item:nth-child(1):after {
+    content: '';
+    display: block;
+    width: 1030px;
+    height: 100%;
+    border-top: 2px dashed #b6b5b5;
+    border-right: 2px dashed #b6b5b5;
+    border-bottom: 2px dashed #b6b5b5;
+    position: absolute;
+    top: 35px;
+    left: 65px;
+    -webkit-border-radius: 0 160px 160px 0 / 0px 50% 50% 0;
+    border-radius: 0 160px 160px 0 / 0px 50% 50% 0;
+    z-index: -2;
   }
   .step__head {
     font-size: 24px;
@@ -792,6 +831,7 @@ label.error {
     font-size: 0;
   }
   .services__nav-item {
+    vertical-align: middle;
     display: inline-block;
     width: 13%;
     margin-right: 1.5%;
@@ -800,6 +840,7 @@ label.error {
     margin-right: 0;
   }
   .services__nav a {
+    height: 82px;
     font-size: 18px;
     line-height: 24px;
     color: #FFF;
@@ -809,7 +850,7 @@ label.error {
     text-decoration: none;
     text-align: center;
     border: 3px solid #f08456;
-    padding: 14px 0;
+    padding: 14px 5px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
@@ -1689,6 +1730,9 @@ label.error {
     width: 32px;
     height: 37px;
   }
+  .step {
+    padding: 10px 0;
+  }
   .step .container {
     padding-right: 100px;
   }
@@ -1713,6 +1757,8 @@ label.error {
     width: 33.33333333%;
     padding: 0 10px;
     float: left;
+    position: relative;
+    padding-top: 75px;
   }
   .step__item:nth-child(4),
   .step__item:nth-child(5),
@@ -1734,10 +1780,14 @@ label.error {
     background-color: #f08456;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    border: 3px solid #fcfffd;
     text-align: center;
     line-height: 65px;
     font-size: 30px;
     color: #fff;
+    position: absolute;
+    left: 5px;
+    top: 0;
     font-family: "Segoe Ui Bold", sans-serif;
   }
   .step__item:nth-child(1):before {
@@ -1763,6 +1813,36 @@ label.error {
     background-color: transparent;
     -webkit-border-radius: 0;
     border-radius: 0;
+    border: none;
+    background-color: #fff;
+    top: -14px;
+  }
+  .step__item:nth-child(6):after {
+    content: '';
+    display: block;
+    border-top: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+    border-left: 15px solid #fff;
+    border-right: 15px solid #b6b5b5;
+    position: absolute;
+    top: 31px;
+    left: 77px;
+    z-index: -1;
+  }
+  .step__item:nth-child(1):after {
+    content: '';
+    display: block;
+    width: 668px;
+    height: 100%;
+    border-top: 2px dashed #b6b5b5;
+    border-right: 2px dashed #b6b5b5;
+    border-bottom: 2px dashed #b6b5b5;
+    position: absolute;
+    top: 35px;
+    left: 65px;
+    -webkit-border-radius: 0 160px 160px 0 / 0px 50% 50% 0;
+    border-radius: 0 160px 160px 0 / 0px 50% 50% 0;
+    z-index: -2;
   }
   .step__head {
     font-size: 24px;
@@ -1806,6 +1886,8 @@ label.error {
     margin-right: 0;
   }
   .services__nav a {
+    vertical-align: middle;
+    height: 82px;
     font-size: 18px;
     line-height: 24px;
     color: #FFF;
@@ -2703,6 +2785,7 @@ label.error {
     height: 37px;
   }
   .step {
+    padding-top: 10px;
     padding-bottom: 20px;
   }
   .step__header {
