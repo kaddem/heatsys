@@ -119,47 +119,16 @@ $(document).ready(function(){
     //Типа табы на наших работах
 
     $('.services__description').hide(0);
-    $('#boiler').show(0);
+    $('#heatsys').show(0);
+    $('.gallery__block').hide(0);
+    $('#img-heatsys').show(0);
 
     $('#link-boiler').on('click', function(e){
       e.preventDefault();
       $('.services__description').hide(0);
       $('#boiler').show(0);
-      $('.services__nav-item a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('#link-boilerbox').on('click', function(e){
-      e.preventDefault();
-      $('.services__description').hide(0);
-      $('#boilerbox').show(0);
-      $('.services__nav-item a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('#link-gaz').on('click', function(e){
-      e.preventDefault();
-      $('.services__description').hide(0);
-      $('#gaz').show(0);
-      $('.services__nav-item a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('#link-stock').on('click', function(e){
-      e.preventDefault();
-      $('.services__description').hide(0);
-      $('#stock').show(0);
-      $('.services__nav-item a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('#link-bio').on('click', function(e){
-      e.preventDefault();
-      $('.services__description').hide(0);
-      $('#bio').show(0);
-      $('.services__nav-item a').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('#link-water').on('click', function(e){
-      e.preventDefault();
-      $('.services__description').hide(0);
-      $('#water').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-boiler').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
     });
@@ -167,9 +136,57 @@ $(document).ready(function(){
       e.preventDefault();
       $('.services__description').hide(0);
       $('#heatsys').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-heatsys').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
     });
+    $('#link-boilerbox').on('click', function(e){
+      e.preventDefault();
+      $('.services__description').hide(0);
+      $('#boilerbox').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-boilerbox').show(0);
+      $('.services__nav-item a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('#link-water').on('click', function(e){
+      e.preventDefault();
+      $('.services__description').hide(0);
+      $('#water').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-water').show(0);
+      $('.services__nav-item a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('#link-stock').on('click', function(e){
+      e.preventDefault();
+      $('.services__description').hide(0);
+      $('#stock').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-stock').show(0);
+      $('.services__nav-item a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('#link-autogaz').on('click', function(e){
+      e.preventDefault();
+      $('.services__description').hide(0);
+      $('#autogaz').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-autogaz').show(0);
+      $('.services__nav-item a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('#link-heatpump').on('click', function(e){
+      e.preventDefault();
+      $('.services__description').hide(0);
+      $('#heatpump').show(0);
+      $('.gallery__block').hide(0);
+      $('#img-heatpump').show(0);
+      $('.services__nav-item a').removeClass('active');
+      $(this).addClass('active');
+    });
+
 
     // Валидация и отправка форм
     $.validator.addMethod("minlenghtphone", function (value, element) {
