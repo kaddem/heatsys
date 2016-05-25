@@ -11,6 +11,23 @@
   &__list{
     .range;
     list-style: none;
+    &:last-child{
+      .step__item{
+        float: right;
+        &:nth-child(1):before{
+          content: '4';
+        }
+        &:nth-child(2):before{
+          content: '5';
+        }
+        &:nth-child(3):before{
+          .sprite(@icon-flag-phone);
+          content: '';
+          background-color: transparent;
+          border-radius: 0;
+        }
+      }
+    }
   }
   &__item{
     .col-12;
