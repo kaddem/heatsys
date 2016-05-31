@@ -22,24 +22,19 @@
   $phone = $_POST['form_phone'];
   $date = $_POST['form_date'];
   $text = $_POST['form_text'];
-  // $quantity = $_POST['form_quantity'];
-  // if (isset($area) && isset($quantity)){
-  //   $comments = "Площадь: ".$area." м.кв; \nКол-во помещений: ".$quantity;
-  // } else if (isset($date)) {
-  //   $comments ="Заказ обратного звонка на: ".$date;
-  // } else if(isset($gift)) {
-  //   $comments ="Выбранный подарок: ".$gift;
-  // } else if(isset($text)) {
-  //   $comments ="Выбранный подарок: ".$text;
-  // } else {
-  //   $comments ="";
-  // }
+  if (isset($date)) {
+    $comments = "Заказ обратного звонка на: ".$date;
+  } else if (isset($text)) {
+    $comments ="Дополнение: ".$text;
+  } else {
+    $comments = "";
+  }
 
 
   // create email body and send it
   // $to = 'order@rosa-montazh.ru'; // put your email
-  $to = 'kademidov@gmail.com'; // put your email
-  $subject = "Заявка от $name | ".$title;
+  $to = 'order@rosa-montazh.ru'; // put your email
+  $subject = "Заявка от $name | ".$title. " | Сайт - Системы отопления";
   $message = "Заполнена форма ".$title.". \n\n".
     "Данные отправителя:\n\nИмя: ".$name." \n".
     "Почта: ".$email." \n".
@@ -58,8 +53,8 @@
   define('CRM_PATH', '/crm/configs/import/lead.php'); // CRM server REST service path
 
   // CRM server authorization data
-  define('CRM_LOGIN', 'rosa.812@mail.ru'); // login of a CRM user able to manage leads
-  define('CRM_PASSWORD', 'rosainstall308'); // password of a CRM user
+  define('CRM_LOGIN', 'order@rosa-montazh.ru'); // login of a CRM user able to manage leads
+  define('CRM_PASSWORD', 'rosamontazh'); // password of a CRM user
   // OR you can send special authorization hash which is sent by server after first successful connection with login and password
   // define('CRM_AUTH', 'e54ec19f0c5f092ea11145b80f465e1a'); // authorization hash
 
@@ -82,7 +77,7 @@
     if (isset($date)) {
       $comments = "Заказ обратного звонка на: ".$date;
     } else if (isset($text)) {
-      $comments ="Комментарий клиента: ".$text;
+      $comments ="Дополнение: ".$text;
     } else {
       $comments = "";
     }
@@ -94,7 +89,7 @@
       'EMAIL_OTHER' => $email,
       'PHONE_WORK' => $phone,
       'COMMENTS' => $comments,
-      'SOURCE_ID' => 'Сайт Системы отопления',
+      'SOURCE_ID' => 'Сайт - Системы отопления',
       'STATUS_DESCRIPTION' => $title,
       // 'ASSIGNED_BY_ID' => '',
     );

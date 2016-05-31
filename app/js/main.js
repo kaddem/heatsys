@@ -87,6 +87,11 @@ $(document).ready(function(){
         $("#form_price").modal({
           fadeDuration: 200
         });
+        var square = $('.price__nav .active').text();
+        var typePump = $(this).parents(".price__item").find('.price__name').text();
+        // var typePump = $(this).parents(".price__item");
+        var des = 'площадь: ' + square + 'м.кв. Вариант системы: ' + typePump;
+        $('.form-des').val(des);
     });
 
 
@@ -131,6 +136,8 @@ $(document).ready(function(){
       $('#img-boiler').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
     $('#link-heatsys').on('click', function(e){
       e.preventDefault();
@@ -140,6 +147,8 @@ $(document).ready(function(){
       $('#img-heatsys').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
     $('#link-boilerbox').on('click', function(e){
       e.preventDefault();
@@ -149,6 +158,8 @@ $(document).ready(function(){
       $('#img-boilerbox').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
     $('#link-water').on('click', function(e){
       e.preventDefault();
@@ -158,6 +169,8 @@ $(document).ready(function(){
       $('#img-water').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
     $('#link-stock').on('click', function(e){
       e.preventDefault();
@@ -167,6 +180,8 @@ $(document).ready(function(){
       $('#img-stock').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
     $('#link-autogaz').on('click', function(e){
       e.preventDefault();
@@ -176,6 +191,8 @@ $(document).ready(function(){
       $('#img-autogaz').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
     $('#link-heatpump').on('click', function(e){
       e.preventDefault();
@@ -185,6 +202,8 @@ $(document).ready(function(){
       $('#img-heatpump').show(0);
       $('.services__nav-item a').removeClass('active');
       $(this).addClass('active');
+      var des = $(this).text();
+      $('#form-services .form-des').val(des);
     });
 
 
@@ -375,7 +394,8 @@ $(document).ready(function(){
             var name = $("#form_price input.form-name").val();
             var email = $("#form_price input.form-email").val();
             var phone = $("#form_price input.form-phone").val();
-            console.log(title, name, phone, email);
+            var text = $("#form_price input.form-des").val();
+            console.log(title, name, phone, email, text);
             $.ajax({
                 url : 'sendmail.php',
                 type : 'POST',
@@ -383,7 +403,8 @@ $(document).ready(function(){
                     form_title: title,
                     form_name: name,
                     form_email: email,
-                    form_phone: phone
+                    form_phone: phone,
+                    form_text: text
                 },
                 success: function() {
                     // yaCounter36809450.reachGoal('recall', function(){
@@ -446,7 +467,8 @@ $(document).ready(function(){
             var name = $("#form-services input.form-name").val();
             var email = $("#form-services input.form-email").val();
             var phone = $("#form-services input.form-phone").val();
-            console.log(title, name, phone, email);
+            var text = $("#form-services input.form-des").val();
+            console.log(title, name, phone, email, text);
             $.ajax({
                 url : 'sendmail.php',
                 type : 'POST',
@@ -454,7 +476,8 @@ $(document).ready(function(){
                     form_title: title,
                     form_name: name,
                     form_email: email,
-                    form_phone: phone
+                    form_phone: phone,
+                    form_text: text
                 },
                 success: function() {
                     // yaCounter36809450.reachGoal('recall', function(){

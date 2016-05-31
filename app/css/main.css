@@ -208,7 +208,7 @@ main {
 .modal {
   -webkit-border-radius: 0;
   border-radius: 0;
-  width: 320px;
+  min-width: 320px;
 }
 .modal a.close-modal {
   top: 5px;
@@ -217,6 +217,12 @@ main {
   background-position: -346px -232px;
   width: 28px;
   height: 28px;
+}
+.modal-thank-you__head {
+  display: block;
+  border-bottom: 1px solid #434242;
+  padding-bottom: 10px;
+  color: #f08456;
 }
 .form {
   padding: 25px;
@@ -728,6 +734,7 @@ label.error {
   }
   .step__list:last-child .step__item {
     float: right;
+    padding-bottom: 10px;
   }
   .step__list:last-child .step__item:nth-child(1):before {
     content: '4';
@@ -898,6 +905,7 @@ label.error {
     font-family: "Segoe Ui", sans-serif;
     font-size: 18px;
     line-height: 24px;
+    padding-top: 8px;
   }
   .services__text ul {
     margin-left: 30px;
@@ -1240,10 +1248,16 @@ label.error {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  footer .range {
+    font-size: 0;
+  }
   footer .logo-footer {
     width: 8.33333333%;
     padding: 0 10px;
     float: left;
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
     padding-top: 5px;
   }
   footer .contacts {
@@ -1251,9 +1265,12 @@ label.error {
     width: 66.66666667%;
     padding: 0 10px;
     float: left;
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
   }
   footer .contacts li {
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
   footer .contacts a {
     color: #fff;
@@ -1318,6 +1335,9 @@ label.error {
     padding: 0 10px;
     float: left;
     font-family: "Segoe Ui Lite", sans-serif;
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
     font-size: 18px;
     line-height: 24px;
   }
@@ -1779,6 +1799,7 @@ label.error {
   }
   .step__list:last-child .step__item {
     float: right;
+    padding-bottom: 10px;
   }
   .step__list:last-child .step__item:nth-child(1):before {
     content: '4';
@@ -2304,10 +2325,16 @@ label.error {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  footer .range {
+    font-size: 0;
+  }
   footer .logo-footer {
     width: 16.66666667%;
     padding: 0 10px;
     float: left;
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
     padding-top: 5px;
   }
   footer .contacts {
@@ -2315,9 +2342,12 @@ label.error {
     width: 50%;
     padding: 0 10px;
     float: left;
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
   }
   footer .contacts li {
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
   footer .contacts a {
     color: #fff;
@@ -2366,7 +2396,7 @@ label.error {
   }
   footer .adress {
     font-family: "Segoe Ui Lite", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
   }
   footer .adress:before {
@@ -2382,6 +2412,9 @@ label.error {
     padding: 0 10px;
     float: left;
     font-family: "Segoe Ui Lite", sans-serif;
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
     font-size: 18px;
     line-height: 24px;
   }
@@ -2395,6 +2428,14 @@ label.error {
 @media screen and (max-width: 767px) {
   .container {
     min-width: 320px;
+  }
+  .modal {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    width: 300px;
+  }
+  main {
+    margin-top: 95px;
   }
   header {
     position: fixed;
@@ -2429,6 +2470,9 @@ label.error {
     padding: 0 10px;
     float: left;
     text-align: center;
+  }
+  header .logo img {
+    width: 45px;
   }
   header .main-nav {
     width: 66.66666667%;
@@ -2493,7 +2537,7 @@ label.error {
     font-size: 14px;
     line-height: 22px;
     width: 140px;
-    padding: 14px 10px;
+    padding: 5px 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -2554,6 +2598,7 @@ label.error {
   }
   .promo__btn {
     width: 100%;
+    max-width: 300px;
     background-color: #ffe252;
     font-size: 20px;
     line-height: 24px;

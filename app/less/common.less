@@ -38,13 +38,22 @@ main{
 }
 .modal{
   border-radius: 0;
-  width: @phone-min;
+  min-width: @phone-min;
 }
 .modal a.close-modal{
   top: 5px;
   right: 5px;
   .sprite(@icon-modal-close);
 }
+.modal-thank-you{
+    &__head{
+      display: block;
+      border-bottom: 1px solid @text-color;
+      padding-bottom: 10px;
+      color: @orange-color;
+
+    }
+  }
 .form{
   padding: 25px;
   padding-top: 35px;
