@@ -246,45 +246,42 @@ $(document).ready(function(){
         },
         submitHandler: function (form, event) {
             event.preventDefault();
-            var test = form;
-            console.log(test);
             var title = $("#form_recall input.title").val();
             var name = $("#form_recall input.form-name").val();
             var date = $("#form_recall input.form-date").val();
             var phone = $("#form_recall input.form-phone").val();
-            console.log(title, name, phone, date);
+            $("body").addClass('preload');
             $.ajax({
-                url : 'sendmail.php',
-                type : 'POST',
-                data : {
-                    form_title: title,
-                    form_name: name,
-                    form_date: date,
-                    form_phone: phone
-                },
-                success: function() {
-                    // yaCounter36809450.reachGoal('recall', function(){
-                    //     console.log('recall в метрику отправлен');
-                    // });
-                    $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
-                    $('#thank-you').modal();
-                    setTimeout(function() {
-                        $.modal.close();
-                    }, 5000);
-                    // clear all fields
-                    $('#form_recall').trigger("reset");
-                },
-                error: function() {
-                    $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span><br>'+name+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
-                    $('#thank-you').modal();
-                    setTimeout(function() {
-                        $.modal.close();
-                    }, 5000);
-                    $('#form_recall').trigger("reset");
-                }
-            });
+              url : 'sendmail.php',
+              type : 'POST',
+              data : {
+                  form_title: title,
+                  form_name: name,
+                  form_date: date,
+                  form_phone: phone
+              },
+              success: function() {
+                  $("body").removeClass('preload');
+                  $.modal.close();
+                  $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется c вами в ближайшее время.</h3>');
+                  $('#thank-you').modal();
+                  setTimeout(function() {
+                      $.modal.close();
+                  }, 5000);
+                  // clear all fields
+                  $('#form_recall').trigger("reset");
+              },
+              error: function() {
+                  $("body").removeClass('preload');
+                  $.modal.close();
+                  $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span><br>'+name+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
+                  $('#thank-you').modal();
+                  setTimeout(function() {
+                      $.modal.close();
+                  }, 5000);
+                  $('#form_recall').trigger("reset");
+              }
+          });
         }
     });
 
@@ -317,13 +314,11 @@ $(document).ready(function(){
         },
         submitHandler: function (form, event) {
             event.preventDefault();
-            var test = form;
-            console.log(test);
             var title = $("#form_consult input.title").val();
             var name = $("#form_consult input.form-name").val();
             var email = $("#form_consult input.form-email").val();
             var phone = $("#form_consult input.form-phone").val();
-            console.log(title, name, phone, email);
+            $("body").addClass('preload');
             $.ajax({
                 url : 'sendmail.php',
                 type : 'POST',
@@ -334,11 +329,9 @@ $(document).ready(function(){
                     form_phone: phone
                 },
                 success: function() {
-                    // yaCounter36809450.reachGoal('recall', function(){
-                    //     console.log('recall в метрику отправлен');
-                    // });
+                    $("body").removeClass('preload');
                     $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
+                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется c вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
                     setTimeout(function() {
                         $.modal.close();
@@ -347,6 +340,7 @@ $(document).ready(function(){
                     $('#form_consult').trigger("reset");
                 },
                 error: function() {
+                    $("body").removeClass('preload');
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span><br>'+name+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
                     $('#thank-you').modal();
@@ -388,14 +382,12 @@ $(document).ready(function(){
         },
         submitHandler: function (form, event) {
             event.preventDefault();
-            var test = form;
-            console.log(test);
             var title = $("#form_price input.title").val();
             var name = $("#form_price input.form-name").val();
             var email = $("#form_price input.form-email").val();
             var phone = $("#form_price input.form-phone").val();
             var text = $("#form_price input.form-des").val();
-            console.log(title, name, phone, email, text);
+            $("body").addClass('preload');
             $.ajax({
                 url : 'sendmail.php',
                 type : 'POST',
@@ -407,11 +399,9 @@ $(document).ready(function(){
                     form_text: text
                 },
                 success: function() {
-                    // yaCounter36809450.reachGoal('recall', function(){
-                    //     console.log('recall в метрику отправлен');
-                    // });
+                    $("body").removeClass('preload');
                     $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
+                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется c вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
                     setTimeout(function() {
                         $.modal.close();
@@ -420,6 +410,7 @@ $(document).ready(function(){
                     $('#form_price').trigger("reset");
                 },
                 error: function() {
+                    $("body").removeClass('preload');
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span><br>'+name+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
                     $('#thank-you').modal();
@@ -461,47 +452,44 @@ $(document).ready(function(){
         },
         submitHandler: function (form, event) {
             event.preventDefault();
-            var test = form;
-            console.log(test);
             var title = $("#form-services input.title").val();
             var name = $("#form-services input.form-name").val();
             var email = $("#form-services input.form-email").val();
             var phone = $("#form-services input.form-phone").val();
             var text = $("#form-services input.form-des").val();
-            console.log(title, name, phone, email, text);
-            $.ajax({
-                url : 'sendmail.php',
-                type : 'POST',
-                data : {
-                    form_title: title,
-                    form_name: name,
-                    form_email: email,
-                    form_phone: phone,
-                    form_text: text
-                },
-                success: function() {
-                    // yaCounter36809450.reachGoal('recall', function(){
-                    //     console.log('recall в метрику отправлен');
-                    // });
-                    $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
-                    $('#thank-you').modal();
-                    setTimeout(function() {
-                        $.modal.close();
-                    }, 5000);
-                    // clear all fields
-                    $('#form-services').trigger("reset");
-                },
-                error: function() {
-                    $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span><br>'+name+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
-                    $('#thank-you').modal();
-                    setTimeout(function() {
-                        $.modal.close();
-                    }, 5000);
-                    $('#form-services').trigger("reset");
-                }
-            });
+            $("body").addClass('preload');
+              $.ajax({
+                  url : 'sendmail.php',
+                  type : 'POST',
+                  data : {
+                      form_title: title,
+                      form_name: name,
+                      form_email: email,
+                      form_phone: phone,
+                      form_text: text
+                  },
+                  success: function() {
+                      $("body").removeClass('preload');
+                      $.modal.close();
+                      $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется c вами в ближайшее время.</h3>');
+                      $('#thank-you').modal();
+                      setTimeout(function() {
+                          $.modal.close();
+                      }, 5000);
+                      // clear all fields
+                      $('#form-services').trigger("reset");
+                  },
+                  error: function() {
+                      $("body").removeClass('preload');
+                      $.modal.close();
+                      $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span><br>'+name+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
+                      $('#thank-you').modal();
+                      setTimeout(function() {
+                          $.modal.close();
+                      }, 5000);
+                      $('#form-services').trigger("reset");
+                  }
+              });
         }
     });
 
@@ -526,12 +514,10 @@ $(document).ready(function(){
         },
         submitHandler: function (form, event) {
             event.preventDefault();
-            var test = form;
-            console.log(test);
             var title = $("#form-question input.title").val();
             var email = $("#form-question input.form-email").val();
             var text = $("#form-question textarea.form-text").val();
-            console.log(title, email, text);
+            $("body").addClass('preload');
             $.ajax({
                 url : 'sendmail.php',
                 type : 'POST',
@@ -541,11 +527,9 @@ $(document).ready(function(){
                     form_text: text
                 },
                 success: function() {
-                    // yaCounter36809450.reachGoal('question', function(){
-                    //     console.log('question в метрику отправлен');
-                    // });
+                    $("body").removeClass('preload');
                     $.modal.close();
-                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span> Наш менеджер свяжется в вами в ближайшее время.</h3>');
+                    $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span> Наш менеджер свяжется c вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
                     setTimeout(function() {
                         $.modal.close();
@@ -554,6 +538,7 @@ $(document).ready(function(){
                     $('#form-question').trigger("reset");
                 },
                 error: function() {
+                    $("body").removeClass('preload');
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span>, пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
                     $('#thank-you').modal();
