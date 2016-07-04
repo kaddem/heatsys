@@ -1,5 +1,26 @@
 $(document).ready(function(){
 
+  window.onload = function () {
+
+    if (window.location.hash){
+      var hsh = window.location.hash;
+      // console.log(hsh);
+      // var att = hsh.substring(1);
+      // console.log(att);
+      // var currentPos = $(document).scrollTop();
+      // console.log(currentPos);
+      var idPos = $(hsh).offset().top;
+      // var idPos = $('#'+att).scrollTop();
+      // console.log(idPos);
+      var docPos = $(document).scrollTop();
+      // console.log(docPos);
+      $('body,html').animate({'scrollTop':idPos - 130}, 100);
+    } else {
+      // console.log('no hash');
+    }
+
+  }
+
   $('#owl-sertificate').owlCarousel({
     loop:true,
     margin:0,
@@ -61,7 +82,9 @@ $(document).ready(function(){
             e.preventDefault();
             var attr = $(this).attr('href').substring(1);
             var currentPosition = $(document).scrollTop();
+            console.log(currentPosition);
             var idPosition = $('#'+attr).offset().top;
+            console.log(idPosition);
             var scrollTime = Math.abs(currentPosition - idPosition) / 3; // Math.abs - модуль числа.
             $('body,html').animate({'scrollTop':idPosition - 130},scrollTime);
         });
